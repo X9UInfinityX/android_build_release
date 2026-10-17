@@ -1,6 +1,8 @@
 flag_value {
   package: "com.android.graphics.libgui.flags"
   name: "bq_gl_fence_cleanup"
-  state: ENABLED
+  # Keep the legacy BufferQueueConsumer::releaseBuffer ABI for proprietary
+  # camera libraries that still pass EGLDisplay/EGLSyncKHR arguments.
+  state: DISABLED
   permission: READ_ONLY
 }
